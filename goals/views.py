@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from .models import Goal, MiniTarget
 from .serializers import GoalSerializer, MiniTargetSerializer
-from drf_app.permissions import IsOwnerOrReadOnly
+from drf_api.permissions import IsOwnerOrReadOnly
 
 class GoalListCreateView(generics.ListCreateAPIView):
     queryset = Goal.objects.all()
